@@ -1,0 +1,19 @@
+{
+  "name": "templ-in",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/erluzi/templ-in.git",
+  "author": "erluzi <747877078@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "koa": "^2.5.1",
+    "winston": "^3.0.0-rc5"
+  },
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "koa-router": "^7.4.0"
+  }
+}
