@@ -4,8 +4,7 @@ const path = require('path');
 module.exports = async (ctx, next) => {
     await next();
     if(!ctx.body){
-        //todo get template and data
-        let template = path.resolve(__dirname, '../views/index.html');
+        let template = path.resolve(__dirname, `../views${ctx.request.path}.html`);
         const data = {
             lastBuildDate: new Date().toUTCString(),
             updated: new Date().toISOString(),
