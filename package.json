@@ -9,6 +9,8 @@
     "start": "node index.js"
   },
   "devDependencies": {
+    "express": "^4.16.3",
+    "express-art-template": "^1.0.1",
     "koa": "^2.5.1",
     "winston": "^3.0.0-rc5"
   },
