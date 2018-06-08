@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "art-template": "^4.12.2",
-    "koa-router": "^7.4.0"
+    "cors": "^2.8.4",
+    "koa-router": "^7.4.0",
+    "request": "^2.87.0"
   }
 }
