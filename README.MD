@@ -10,5 +10,5 @@ npm start
 node server.js
 ```
 
-### imgProxy.js
-- 代理跨域图片资源
+### servers
+- imgProxy.js: 代理跨域图片资源
