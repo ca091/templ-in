@@ -19,8 +19,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/join', (req, res, next) => {
-    res.render('join', {title: 'join'})
+    res.render('join', {title: 'join', body: 'join us'})
 });
+
+const route_vue = require('./routes-express/route_vue_render.js');
+app.use('/vuessr', route_vue);
 
 app.use((req, res, next) => {
     var err = new Error('Sorry Not Found');

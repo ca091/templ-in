@@ -14,7 +14,7 @@ router.get('/', async ctx => {
     ctx.body = art(template, data)
 });
 
-router.get('/join', require('./routes/join'));
-router.get('*', require('./routes/404'));
+router.get('/join', require('./routes-koa/join'));
+router.get('*', require('./routes-koa/404'));
 
 module.exports = router;
