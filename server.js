@@ -7,9 +7,16 @@ art.defaults.extname = '.html';
 const config = require('./config');
 
 const app = express();
-app.set('views', path.resolve(__dirname, './views'));
-app.engine('html', require('express-art-template'));
-app.set('view engine', 'html');
+
+// 模版引擎选择：art-template 、pug ...
+
+// app.set('view engine', 'html');
+// app.set('views', path.resolve(__dirname, './views'));
+// app.engine('html', require('express-art-template'));
+
+app.set('view engine', 'pug');
+app.set('views', path.resolve(__dirname, './pugs'));
+
 app.set('view options', {
     debug: process.env.NODE_ENV !== 'production'
 });

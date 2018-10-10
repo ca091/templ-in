@@ -18,3 +18,6 @@ node server.js
 ```
 npm run build  //生成 vue-ssr-server-bundle.json
 ```
+
+### 模版引擎 pug
+- [pugjs docs](https://pugjs.org/language/inheritance.html)
