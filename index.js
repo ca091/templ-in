@@ -2,12 +2,12 @@ const Koa = require('koa');
 const logger = require('./utils/logger');
 const config = require('./config');
 
-const onerror = require('./middleware/onerror');
-const header = require('./middleware/header');
-const debug = require('./middleware/debug');
-const template = require('./middleware/template');
+const onerror = require('./middleware-koa/onerror');
+const header = require('./middleware-koa/header');
+const debug = require('./middleware-koa/debug');
+const template = require('./middleware-koa/template');
 
-const router = require('./router');
+const router = require('./router_koa.js');
 
 process.on('uncaughtException', (e) => {
     logger.error('uncaughtException: ' + e);
