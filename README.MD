@@ -15,3 +15,6 @@ node server.js
 
 ### vue ssr
 - 只在express做了集成
+```
+npm run build  //生成 vue-ssr-server-bundle.json
+```
