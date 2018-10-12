@@ -6,7 +6,7 @@
   "author": "erluzi <747877078@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "build": "webpack --config ./vue-render/webpack.vuessr.js"
   },
   "devDependencies": {

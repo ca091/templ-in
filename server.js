@@ -15,7 +15,7 @@ const app = express();
 // app.engine('html', require('express-art-template'));
 
 app.set('view engine', 'pug');
-app.set('views', path.resolve(__dirname, './pugs'));
+app.set('views', path.resolve(__dirname, './views-pug'));
 
 app.set('view options', {
     debug: process.env.NODE_ENV !== 'production'
