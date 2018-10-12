@@ -110,11 +110,7 @@ block header
             background: #fff;
             color: #ccc;
         }
-
-        .message--typing{
-            display: none;
-        }
-
+        
         .message--typing .message__content div {
             animation: wave 0.5s ease infinite;
             border-radius: 100%;
@@ -163,7 +159,7 @@ block content
                     .header__member.header__member--server
             //.message.message--left
             //    .message__content Server left the chat 💅
-            .message.message--typing.message--browser
+            .message.message--typing.message--browser(style='display: none')
                 .message__content
                     div
                     div
