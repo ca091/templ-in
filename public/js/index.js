@@ -40,6 +40,7 @@ const msgs = [
 let el_chat = document.querySelector('.chat');
 let el_input = document.querySelector('#input');
 let el_wait = document.querySelector('.message--typing');
+let w_el_chat = el_chat.clientWidth;
 
 function setMsg({type='server', msg='test append message'}) {
     let div = document.createElement('div');
@@ -60,7 +61,7 @@ function setStyle(doms){
 function appendMsg({type='server', msg='test append message'}) {
     let doms = setMsg({type, msg})
     el_chat.insertBefore(doms[0], el_wait)
-    let translateX = window.innerWidth / 2 - doms[1].clientWidth / 2
+    let translateX = w_el_chat / 2 - doms[1].clientWidth / 2
     doms[1].style.transform = `translateX(${type==='server'?'-':''}${translateX}px) scale(0.2)`
     doms[0].className = `message message--${type}`
     setTimeout(() => {
