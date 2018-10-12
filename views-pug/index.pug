@@ -1,4 +1,175 @@
 extends ./common/layout
+block header
+    style.
+        @import url("https://fonts.googleapis.com/css?family=Lato");
+
+        body {
+            margin: 0;
+            background: #ffe9ef;
+            font-family: 'Lato', sans-serif;
+        }
+
+        main{
+            max-width: 444px;
+            margin: 0 auto;
+        }
+
+        .chat {
+            height: 70vh;
+            position: relative;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #e0bbe4;
+        }
+
+        .chat__header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            transform: translate(0, 0);
+            color: #fff;
+            background: #be71c7;
+            text-transform: uppercase;
+        }
+
+        .header__members {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+
+        .header__member {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+            background: linear-gradient(25deg, #808080, #fff);
+            background-image: url("https://source.unsplash.com/JelL3CneNDY/50x50");
+            background-size: cover;
+            margin-right: 4px;
+        }
+
+        .header__member--server {
+            background-image: url("https://source.unsplash.com/uWaRsN-CqY0/50x50");
+        }
+
+        .message {
+            display: flex;
+            flex: 0 0 auto;
+            margin-bottom: 5px;
+        }
+
+        .message--browser {
+            justify-content: flex-start;
+        }
+
+        .message--browser .message__content {
+            background: #eee;
+        }
+
+        .message--server {
+            justify-content: flex-end;
+        }
+
+        .message--server .message__content {
+            background: #e0bbe4;
+            color: #fff;
+        }
+
+        .message__content {
+            border-radius: 15px;
+            min-height: 50px;
+            align-items: center;
+            display: inline-flex;
+            padding: 10px;
+            text-align: justify;
+            transform-origin: center bottom;
+        }
+
+        .hide{
+            opacity: 0;
+        }
+
+        .message--left {
+            justify-content: center;
+        }
+
+        .message--left .message__content {
+            background: #fff;
+            color: #ccc;
+        }
+
+        .message--typing{
+            display: none;
+        }
+
+        .message--typing .message__content div {
+            animation: wave 0.5s ease infinite;
+            border-radius: 100%;
+            height: 8px;
+            width: 8px;
+            background: #b3b3b3;
+            margin: 2px;
+        }
+
+        .message--typing .message__content div:nth-of-type(1) {
+            animation-delay: 0.1s;
+        }
+
+        .message--typing .message__content div:nth-of-type(2) {
+            animation-delay: 0.2s;
+        }
+
+        .message--typing .message__content div:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes wave {
+            50% {
+                transform: translate(0, -150%);
+            }
+        }
+
+        input#input{
+            display: block;
+            margin: 10px auto;
+            padding-left: 10px;
+            width: 94%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+
+
 block content
-    main.
-        index page
+    main
+        .chat
+            .header.chat__header
+                .header__title New Request
+                .header__members
+                    .header__member
+                    .header__member.header__member--server
+            //.message.message--left
+            //    .message__content Server left the chat 💅
+            .message.message--typing.message--browser
+                .message__content
+                    div
+                    div
+                    div
+
+        .input
+            input#input(type='text' placeholder='input message')
+
+    script(src=('/js/index.js'))

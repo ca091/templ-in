@@ -8,6 +8,8 @@ const config = require('./config');
 
 const app = express();
 
+app.use(express.static('public', {}));
+
 // 模版引擎选择：art-template 、pug ...
 
 // app.set('view engine', 'html');
