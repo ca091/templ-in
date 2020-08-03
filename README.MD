@@ -1,6 +1,6 @@
 ### for koa
 ```
-node index.js
+node koa_art-template index.js
 ```
 
 ### for express

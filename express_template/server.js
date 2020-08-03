@@ -35,7 +35,7 @@ const route_vue = require('./routes-express/route_vue_render.js');
 app.use('/vuessr', route_vue);
 
 app.use((req, res, next) => {
-    var err = new Error('Sorry Not Found');
+    let err = new Error('Sorry Not Found');
     err.status = 404;
     next(err);
 });
@@ -57,7 +57,7 @@ function onError(error) {
         throw error;
     }
 
-    var bind = typeof port === 'string'
+    let bind = typeof port === 'string'
         ? 'Pipe ' + port
         : 'Port ' + port;
 
@@ -77,8 +77,8 @@ function onError(error) {
 }
 
 function onListening() {
-    var addr = server.address();
-    var bind = typeof addr === 'string'
+    let addr = server.address();
+    let bind = typeof addr === 'string'
         ? 'pipe ' + addr
         : 'port ' + addr.port;
     console.log('Listening on ' + bind);
