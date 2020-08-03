@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["publish"],{cc20:function(s,t,i){"use strict";i.r(t);var l={name:"VhRoomPublish"},n=i("2877"),e=Object(n.a)(l,(function(){var s=this.$createElement;return(this._self._c||s)("div",{staticClass:"vh-room-publish"},[this._v(" vh-room-publish ")])}),[],!1,null,null,null);t.default=e.exports}}]);

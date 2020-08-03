@@ -2,6 +2,7 @@
 ```
 node express_template/server.js
 node koa_art-template/index.js
+node koa_router-spa/index.js
 ```
 
 ## vue ssr

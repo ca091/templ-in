@@ -16,13 +16,14 @@
     "vue-server-renderer": "^2.5.17",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^3.6.0",
-    "winston": "^3.0.0-rc5"
+    "winston": "^3.0.0-rc5",
+    "cors": "^2.8.4",
+    "pug": "^2.0.3"
   },
   "dependencies": {
     "art-template": "^4.12.2",
-    "cors": "^2.8.4",
     "koa-router": "^7.4.0",
-    "pug": "^2.0.3",
+    "koa-static": "^5.0.0",
     "request": "^2.87.0",
     "vue": "^2.5.17"
   }
